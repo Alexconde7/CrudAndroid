@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioSesion">
+
+    <EditText
+        android:id="@+id/etEmailNombre"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="@string/Introduce_tu_email_o_nombre"
+        android:minHeight="48dp"
+        android:textColorLink="@color/azul2"
+        app:layout_constraintEnd_toEndOf="@+id/tvInicioSesion"
+        app:layout_constraintStart_toStartOf="@+id/tvInicioSesion"
+        app:layout_constraintTop_toBottomOf="@+id/tvInicioSesion" />
+
+    <EditText
+        android:id="@+id/etContra"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="@string/Contrasenya"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/bEntrar"
+        app:layout_constraintEnd_toEndOf="@+id/etEmailNombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etEmailNombre"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailNombre"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/bEntrar"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/boton"
+        android:onClick="entrar"
+        android:text="@string/Entrar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bRegist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bRegist"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/boton"
+        android:onClick="registrarme"
+        android:text="@string/RegistrarNuevaCuenta"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/registrarGoogle"
+        app:layout_constraintEnd_toEndOf="@+id/bEntrar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bEntrar" />
+
+    <TextView
+        android:id="@+id/tvInicioSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/IniciarSesion"
+        android:textColor="@color/azul"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/registrarGoogle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/boton2"
+        android:drawableLeft="@drawable/googlev"
+        android:onClick="proximamente"
+        android:padding="10dp"
+        android:text="@string/EntrarGoogle"
+        app:layout_constraintBottom_toTopOf="@+id/registrarFacebook"
+        app:layout_constraintEnd_toEndOf="@+id/bRegist"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bRegist" />
+
+    <Button
+        android:id="@+id/registrarFacebook"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/boton2"
+        android:drawableLeft="@drawable/facebookv"
+        android:onClick="proximamente"
+        android:padding="10dp"
+        android:text="@string/EntrarFacebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bRegist"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bRegist" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
